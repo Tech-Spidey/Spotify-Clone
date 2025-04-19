@@ -1,0 +1,479 @@
+body {
+  background-color: #141414;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.navbar {
+  height: 100vh;
+  width: 20vw;
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.nav-keys {
+  height: 12vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 0.3rem;
+  background-color: #212121;
+  border-radius: 0.6rem;
+  justify-content: center;
+}
+
+.home,
+.search,
+.library-nav {
+  height: 6vh;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  align-content: center;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.fa-solid.fa-magnifying-glass,
+.fa-solid.fa-house,
+.fa-solid.fa-album-collection {
+  margin-right: 1rem;
+}
+
+.fa-solid.fa-magnifying-glass + span,
+.fa-solid.fa-house + span,
+.fa-solid.fa-album-collection + span {
+  font-size: 1rem;
+}
+
+.fa-solid.fa-plus {
+  margin-left: auto;
+  margin-right: 6%;
+}
+
+.fa-solid.fa-arrow-right {
+  margin-right: 6%;
+}
+
+.dull-options {
+  opacity: 0.6;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.dull-options:hover {
+  opacity: 1;
+}
+
+.enlarge-options:hover{
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.library {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 0.3rem;
+  background-color: #212121;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.browse-podcast,
+.create-playlist {
+  font-family: "Gabarito", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  margin: 0.3rem;
+  background-color: #313131;
+  border-radius: 0.6rem;
+}
+
+.heading {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.description {
+  font-size: 0.8rem;
+}
+
+.create-playlist-button {
+  font-family: "Ubuntu";
+  border-radius: 3rem;
+  width: 10rem;
+  height: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.4rem;
+}
+
+.main {
+  height: 100vh;
+  margin: 0.3rem;
+  background-color: #212121;
+  flex-grow: 1;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  flex-shrink: 0;
+  height: 6vh;
+  border-radius: 0.6rem;
+  background-color: #212121;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-left,
+.header-right {
+  flex-grow: 1;
+  display: flex;
+}
+
+.header-left {
+  justify-content: flex-start;
+  gap:1rem;
+  padding-left: 1rem;
+}
+
+.header-right {
+  justify-content: end;
+  gap:1rem;
+  padding-right: 1rem;
+}
+
+#left-nav,
+#right-nav,
+#user {
+  font-size: 1.2rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+}
+
+#upgrade,
+#install {
+  font-family: "Ubuntu";
+  border-radius: 3rem;
+  width: 6rem;
+  height: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#install {
+  width: 8rem;
+}
+
+.fa-regular.fa-circle-down {
+  margin-right: 0.3rem;
+}
+
+.header-button-nav,
+.header-button-user {
+  background-color: #141414;
+  color: white;
+  transition: 0.3s;
+}
+
+.header-button-nav:hover {
+  background-color: #313131; 
+  color: white;
+}
+
+.header-button-user:hover {
+  background-color: white;
+  color: #141414;
+}
+
+@media (max-width: 1000px) {
+  .hide {
+    display: none;
+  }
+}
+
+.main-body {
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  padding-bottom: 5rem;
+}
+
+.recently-played,
+.podcasts-heading {
+  flex-shrink: 0;
+  height: 6vh;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+}
+
+.recently-played-songs,
+.podcasts {
+  flex-grow: 1;
+  padding: 0.6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  justify-items: center;
+  gap: 0.6rem;
+}
+
+.top-songs,
+.podcast-songs {
+  height: 19rem;
+  width: 12rem;
+  min-width: 12rem;
+  background-color: #252424;
+  color: white;
+  padding: 1.3rem;
+  border-radius: 0.6rem;
+  box-sizing: border-box;
+}
+
+.podcast-songs > .img {
+  height: 75%;
+}
+
+.img {
+  height: 60%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.6rem;
+}
+
+.img-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading,
+.song {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  font-weight: 600;
+  align-content: center;
+}
+
+.heading-detail,
+.song-detail {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.589);
+  text-align: left;
+}
+
+.media-player {
+  position: fixed;
+  bottom: 0;
+  padding: 0.3rem 0.3rem;
+  border-radius: 0.6rem;
+  height: 5rem;
+  width: 100vw;
+  background-color: #141414;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.media-player > .img {
+  width: 5vw;
+  height: 100%;
+  margin: 0.13rem;
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.song-playing {
+  width: 15vw;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.song-playing > .music-details,
+.music-tools {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.song-playing > .music-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-playing > .music-details > .artist,
+.name {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding-left: 0.6rem;
+  margin: 0.06rem;
+}
+
+.song-playing > .music-details > .name {
+  font-size: 1.07rem;
+  font-weight: 600;
+  align-content: flex-end;
+}
+
+.song-playing > .music-details > .artist {
+  color: rgba(255, 255, 255, 0.589);
+  font-size: 0.8rem;
+  font-weight: 200;
+  align-content: flex-start;
+}
+
+.music-tools {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.controls {
+  flex-grow: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.control-buttons {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap:2rem;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.pause {
+  background-color: white;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  color: black;
+}
+
+.pause i{
+  font-size:1.2rem ;
+}
+
+.control-bar {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.current-play-time {
+  flex-grow: 1;
+  align-content: center;
+  text-align: end;
+  padding-right: 0.6rem;
+}
+
+.total-play-time {
+  flex-grow: 1;
+  align-content: center;
+  padding-left: 0.6rem;
+  text-align: start;
+}
+
+.bar {
+  width: 60%;
+  align-content: center;
+}
+
+.progress-bar {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.3rem;
+  height: 0.3rem;
+  width: 100%;
+  display:flex;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 60%;
+  background-color:  rgb(77, 208, 77);;
+  border-radius: 0.3rem;
+}
+
+.progress-bar-thumb{
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: rgb(77, 208, 77);
+  border-radius: 50%;
+  cursor: pointer;
+  position:relative;
+  bottom:0.25rem;
+  right:0.2rem;
+}
+.volume {
+  color: white;
+  width: 25vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.volume-controls {
+  width: 10vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.volume-bar {
+  width: 8vw;
+  height: 0.3rem;
+}
