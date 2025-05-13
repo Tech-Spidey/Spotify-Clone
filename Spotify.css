@@ -223,7 +223,6 @@ button {
   flex-direction: column;
   overflow: scroll;
   padding-bottom: 5rem;
-  margin-bottom: 15rem;
 }
 
 .recently-played,
