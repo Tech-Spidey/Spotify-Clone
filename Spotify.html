@@ -160,8 +160,8 @@
               style="background-image: url(Assets/Top\ 50\ Songs.jpg)"
             ></div>
             <div class="img-detail">
-              <div class="heading">Top 50-Global</div>
-              <div class="heading-detail">
+              <div class="song">Top 50-Global</div>
+              <div class="song-detail">
                 Your daily update of the most played tracks are here.
               </div>
             </div>
@@ -241,12 +241,12 @@
     <div class="media-player">
       <div
         class="img"
-        style="background-image: url(Assets/Spider-Man.jpg)"
+        style="background-image: url(Assets/Logo/Spotify\ Faded\ Logo.png)"
       ></div>
       <div class="song-playing">
-        <div class="music-details">
-          <div class="name">Spider-Man</div>
-          <div class="artist">Marvel Studios</div>
+        <div class="details">
+          <div class="song">No song playing</div>
+          <div class="song-detail"></div>
         </div>
         <div class="music-tools">
           <i class="fa-regular fa-heart dull-options"></i>
@@ -257,35 +257,29 @@
         <div class="control-buttons">
           <i class="fa-solid fa-shuffle dull-options"></i>
           <i class="fa-solid fa-backward-step dull-options"></i>
-          <button class="pause enlarge-options">
-            <i class="fa-solid fa-pause"></i>
-          </button>
+          <i class="fa-solid fa-play enlarge-options media-play-pause-button"></i>
           <i class="fa-solid fa-forward-step dull-options"></i>
           <i class="fa-solid fa-repeat dull-options"></i>
         </div>
         <div class="control-bar">
-          <div class="current-play-time">2:06</div>
-          <div class="bar">
-            <div class="progress-bar">
-              <div class="progress-bar-fill"></div>
-              <div class="progress-bar-thumb"></div>
-            </div>
+          <div class="current-play-time">0:00</div>
+          <div class="play-bar">
+            <div class="progress-bar-fill"></div>
+            <input type="range" id="play-time" class="progress-bar" value="0" min="0" max="210" autocomplete="off"/>
           </div>
           <div class="total-play-time">3:30</div>
         </div>
       </div>
-      <div class="volume">
+      <div class="volume-options">
         <i class="fa-regular fa-square-caret-right dull-options"></i>
         <i class="fa-sharp fa-solid fa-microphone-stand dull-options"></i>
         <i class="fa-solid fa-list-music dull-options"></i>
         <i class="fa-regular fa-computer-speaker dull-options"></i>
+        <i class="fa-regular fa-volume dull-options"></i>
         <div class="volume-controls">
-          <i class="fa-regular fa-volume dull-options"></i>
           <div class="volume-bar">
-            <div class="progress-bar">
-              <div class="progress-bar-fill"></div>
-              <div class="progress-bar-thumb"></div>
-            </div>
+            <div class="progress-bar-fill"></div>
+            <input type="range" id="volume" class="progress-bar" value="0" min = "0" max = "100" autocomplete="off"/>
           </div>
         </div>
         <i
